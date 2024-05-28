@@ -1,0 +1,147 @@
+.greeting {
+    margin-right: 5px; /* Adjust as needed */
+}
+
+/* Ensure inline-block display for the greeting and dropdown */
+.greeting,
+.dropdown {
+    margin-right: 40px;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Add a pointer cursor to the chevron icon */
+.gg-chevron-down {
+    cursor: pointer;
+}
+
+/* Style the dropdown button text */
+.dropdown span {
+    cursor: pointer;
+}
+
+/* Add a hover effect to the dropdown button text */
+.dropdown span:hover {
+    color: blue;
+}
+
+/* Other existing CSS rules */
+.recommend {
+    margin-top: 10px;
+}
+
+.recommend h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 100px;
+}
+
+.recommend_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 60px;
+    margin-right: 40px;
+}
+
+.recommend_images div {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.recommend_images img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.footer-text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.footer_img {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 225px;
+}
+
+.last-text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.last_img {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 175px;
+}
+
+.WIN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.WIN img {
+    width: 1500px;
+    height: auto;
+}
+
+footer p, footer h5, footer a {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.finale {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.daily {
+    text-align: center; /* Center align the content */
+}
+
+.daily h1 {
+    margin-left: 50px; /* Add left margin to the text */
+}

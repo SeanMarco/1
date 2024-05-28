@@ -1,0 +1,993 @@
+.recent-searches-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.recent-search-bar {
+    width: 200px;
+    /* Set the width to a fixed size */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slide-in 0.3s ease-out;
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin: 0 0 20px; /* Adjust as needed */
+}
+
+.modal-content img.modal-image {
+    width: 1px; /* Set your desired width */
+    height:auto; /* Maintain aspect ratio */
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0d25da;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1417c5;
+}
+
+
+/* Button styles */
+
+.text-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.text-button:hover {
+    background-color: #ddd;
+}
+
+.sell-button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.sell-button:hover {
+    background-color: #45a049;
+}
+
+header.phishing-alert {
+    background-color: #f2f2f2;
+    /* Lighter gray background */
+    color: #000000;
+    /* Black font color */
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    /* Smaller font size */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    height: 10px;
+    /* Adjust height */
+}
+
+header.phishing-alert .phishing {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Align items vertically */
+    height: auto;
+}
+
+header.phishing-alert .phishing img {
+    max-width: 100%;
+    /* Ensure image doesn't exceed container width */
+}
+
+header.phishing-alert .phishing-text {
+    text-align: center;
+    /* Align text to the center */
+    margin-left: 10px;
+    /* Add some space between image and text */
+}
+
+header.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding-left: 90px;
+    /* Add left margin */
+    padding-right: 120px;
+    /* Add right margin */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo img {
+    width: auto;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Maintain aspect ratio */
+}
+
+.main-header .listings {
+    flex: 1;
+    /* Adjust the flex value to control the size */
+    text-align: left;
+    /* Center the listings */
+    margin-left: 20px;
+    /* Add some space between logo and listings */
+}
+
+.main-header .listings ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* Align the list items to the start */
+    align-items: center;
+    /* Center vertically */
+    height: 100%;
+    font-family: "Times New Roman", sans-serif;
+    /* Change the font family here */
+    color: #000000;
+}
+
+.main-header .listings li {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 15px;
+    /* Adjust the margin to add space between the list items */
+}
+
+.main-header .buttons {
+    display: flex;
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    align-items: center;
+    gap: 10px;
+    /* Add some space between buttons */
+}
+
+.main-header .buttons .text-button {
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    color: #000000;
+    /* Set text color to black */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 1rem;
+    /* Adjust font size */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 0;
+    /* Remove padding */
+    margin: 0 10px;
+    /* Add some space between text buttons */
+    font-family: "Times New Roman", sans-serif;
+    /* Ensure consistent font */
+}
+
+.main-header .buttons .text-button:hover {
+    color: #555555;
+    /* Slightly darken text color on hover */
+}
+
+.main-header .buttons .sell-button {
+    background-color: red;
+    /* Red background color */
+    color: white;
+    /* White text color */
+    border: none;
+    /* Remove border */
+    padding: 10px 20px;
+    /* Add padding */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.main-header .buttons .sell-button:hover
+/* Your existing CSS styles */
+
+
+/* Additional styles for the new search bars */
+
+.recent-searches-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.recent-search-bar {
+    width: 200px;
+    /* Set the width to a fixed size */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header.phishing-alert {
+    background-color: #f2f2f2;
+    /* Lighter gray background */
+    color: #000000;
+    /* Black font color */
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    /* Smaller font size */
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    height: 10px;
+    /* Adjust height */
+}
+
+header.phishing-alert .phishing {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Align items vertically */
+    height: auto;
+}
+
+header.phishing-alert .phishing img {
+    max-width: 100%;
+    /* Ensure image doesn't exceed container width */
+}
+
+header.phishing-alert .phishing-text {
+    text-align: center;
+    /* Align text to the center */
+    margin-left: 10px;
+    /* Add some space between image and text */
+}
+
+header.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding-left: 90px;
+    /* Add left margin */
+    padding-right: 120px;
+    /* Add right margin */
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo img {
+    width: auto;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Maintain aspect ratio */
+}
+
+.main-header .listings {
+    flex: 1;
+    /* Adjust the flex value to control the size */
+    text-align: left;
+    /* Center the listings */
+    margin-left: 20px;
+    /* Add some space between logo and listings */
+}
+
+.main-header .listings ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* Align the list items to the start */
+    align-items: center;
+    /* Center vertically */
+    height: 100%;
+    font-family: "Times New Roman", sans-serif;
+    /* Change the font family here */
+    color: #000000;
+}
+
+.main-header .listings li {
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 15px;
+    /* Adjust the margin to add space between the list items */
+}
+
+.main-header .buttons {
+    display: flex;
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    align-items: center;
+    gap: 10px;
+    /* Add some space between buttons */
+}
+
+.main-header .buttons .text-button {
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
+    color: #000000;
+    /* Set text color to black */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 1rem;
+    /* Adjust font size */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 0;
+    /* Remove padding */
+    margin: 0 10px;
+    /* Add some space between text buttons */
+    font-family: "Times New Roman", sans-serif;
+    /* Ensure consistent font */
+}
+
+.main-header .buttons .text-button:hover {
+    color: #555555;
+    /* Slightly darken text color on hover */
+}
+
+.main-header .buttons .sell-button {
+    background-color: red;
+    /* Red background color */
+    color: white;
+    /* White text color */
+    border: none;
+    /* Remove border */
+    padding: 10px 20px;
+    /* Add padding */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.main-header .buttons .sell-button:hover {
+    background-color: darkred;
+    /* Darker red on hover */
+}
+
+.search-container {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.search-container .search-image {
+    width: 1275px;
+    /* Adjust width as needed */
+    height: 500px;
+    /* Maintain aspect ratio */
+    padding-left: 90px;
+    /* Add left margin */
+    padding-right: 120px;
+    border: none;
+    /* Remove border */
+    border-radius: 50px;
+    /* Rounded corners */
+}
+
+.search-container .search-bar-wrapper {
+    position: absolute;
+    top: 56%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 940px;
+    /* Make the search bar slightly smaller */
+}
+
+.search-container .search-bar {
+    width: 103%;
+    padding: 12px;
+    /* Slightly reduce padding */
+    font-size: 1rem;
+    /* Slightly reduce font size */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.searches {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: small;
+    padding-left: 110px;
+    padding-right: 150px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-left: 70px;
+    margin-right: 100px;
+    padding-top: 25px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer/Edge */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 50%;
+    scroll-snap-align: start;
+    margin-right: 0px;
+    /* Add margin between carousel items */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    /* Add this line to ensure both buttons are visible */
+    justify-content: space-between;
+    /* Add this line to properly position the buttons */
+    z-index: 1;
+}
+
+.carousel-controls button {
+    position: relative;
+    /* Add this line to maintain button position */
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-controls button::before {
+    content: "";
+    display: inline-block;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.carousel-controls button.left::before {
+    transform: rotate(135deg);
+}
+
+.carousel-controls button.right::before {
+    transform: rotate(-45deg);
+}
+
+.carousel-item img {
+    max-width: 90%;
+    /* Make images slightly smaller */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Center images horizontally */
+    padding: 0 10px;
+    /* Add padding left and right */
+}
+
+.Featured_Categories {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: small;
+    padding-left: 110px;
+    padding-right: 150px;
+}
+
+.ez {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Optional: adds space between images */
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+.ez img {
+    max-width: 240px;
+    /* Optional: set a max width for the images */
+    height: auto;
+}
+
+.Metro_Manila {
+    margin-top: 3%;
+    margin-left: 100px;
+    font-size: small;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    /* Display list items inline */
+    margin-right: 15px;
+    /* Space between the buttons */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px 20px;
+    border: 2px solid white;
+    /* White border */
+    border-radius: 10px;
+    /* Rounded borders */
+    background-color: #f0f0f0;
+    /* Optional: Background color */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    /* Optional: Hover effect */
+}
+
+
+/* Style for Manila content */
+
+.manila_content {
+    display: flex;
+    /* Use flexbox */
+    margin-top: 20px;
+    gap: 20px;
+    /* Add gap between flex items */
+    margin-left: 10px;
+}
+
+
+/* Default style for images inside Manila content */
+
+.manila_content img {
+    max-width: 300px;
+    height: auto;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* Style for Quezon City content */
+
+.qct_content {
+    display: flex;
+    /* Use flexbox */
+    margin-top: 20px;
+    gap: 20px;
+    /* Add gap between flex items */
+    margin-left: 10px;
+}
+
+
+/* Default style for images inside Quezon City content */
+
+.qct_content img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+/* Style for Pasig City content */
+
+.pasig_content {
+    display: flex;
+    /* Use flexbox */
+    margin-top: 20px;
+    gap: 20px;
+    /* Add gap between flex items */
+    margin-left: 10px;
+}
+
+
+/* Default style for images inside Pasig City content */
+
+.pasig_content img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+/* Style for Cebu content */
+
+.cebu_content {
+    display: flex;
+    /* Use flexbox */
+    margin-top: 20px;
+    gap: 20px;
+    /* Add gap between flex items */
+    margin-left: 10px;
+}
+
+
+/* Default style for images inside Cebu content */
+
+.cebu_content img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+/* Style for Newly Listed Cars content */
+
+.Newly_Listed_Cars {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+
+/* Style for cars content */
+
+.cars_content {
+    display: flex;
+    /* Use flexbox */
+    margin-top: 20px;
+    gap: 20px;
+    /* Add gap between flex items */
+}
+
+
+/* Default style for images inside cars content */
+
+.cars_content img {
+    max-width: 300px;
+    height: auto;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.Popular_Goods {
+    margin-top: 20px;
+    /* Adjust margin as needed */
+    margin-left: 100px;
+    /* Adjust margin as needed */
+}
+
+.Popular_Goods img {
+    margin-top: 20px;
+    max-width: 250px;
+    /* Set maximum width for images */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.hidden {
+    display: none;
+}
+
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*add*/
+
+
+.recommend {
+    margin-top: 10px;
+}
+
+.recommend h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 100px;
+}
+
+.recommend_images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+    gap: 5px; /* Adds space between images */
+    margin-left: 60px;
+    margin-right: 40px;
+
+}
+
+.recommend_images div {
+    flex: 1 1 calc(25% - 20px); /* Adjust the width to fit four images in a row with gaps */
+    box-sizing: border-box; /* Ensure padding/margin don't affect width calculations */
+}
+
+.recommend_images img {
+    width: 300px; /* Make image take the full width of the parent div */
+    height: 450px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill the container nicely */
+    
+}
+
+
+.footer-text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.footer_img {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 225px;
+ }
+
+ 
+.last-text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.last_img {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        margin-left: 50px;
+        margin-right: 50px;
+        width: px;
+        height: 175px;
+ }
+
+ .WIN {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Optional: Set height to view height to center vertically */
+}
+
+.WIN img {
+    width: 1500px;  /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+
+
+footer p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+footer h5{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+footer a{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.finale{
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+
+
+
+.options {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.social-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 1px ;
+}
+
+.google-login,
+.facebook-login {
+    width: 48%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+.signup{
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute; /* Position relative to the container */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+    font-size: 20px;
+    color: #aaa;
+    text-decoration: none; /* Ensure the X button doesn't have underline */
+}
+
+
