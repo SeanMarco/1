@@ -14,4 +14,4 @@
         echo '<script>alert("Deleted successfully!");</script>';
     }
 ?>
-
+<!-- Offer -->
